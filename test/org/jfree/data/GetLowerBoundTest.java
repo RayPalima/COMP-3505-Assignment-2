@@ -20,23 +20,13 @@ class GetLowerBoundTest {
   	}
   	
   	
-  	//  ECP: Valid - Within within values.
+  	//  ECP: Valid - Within range values.
 	@Test
 	void validLowerValue() {
 		assertEquals(1, exampleRange.getLowerBound(),"The lower bound value is 1.");
 	}
 	
-	//	ECP: Invalid - Outside valid values.
-	@Test
-	void invalidLowerValue() {
-		assertNotEquals(101, exampleRange.getLowerBound(), "The lower bound value is not 101.");
-	}
-
-	// ECP: Invalid - Outside valid values.
-	@Test
-	void invalidBelowLowerValue() {
-		assertNotEquals(0, exampleRange.getLowerBound(), "The lower bound value is not 0.");
-	}
+	//	Note: ECP below and above valid values (0 and 101) were removed as they are covered in BVA testing.
 
 	// BVA: LB - 1
 	@Test

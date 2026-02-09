@@ -26,17 +26,7 @@ class GetUpperBoundTest {
 		assertEquals(100, exampleRange.getUpperBound(),"The upper bound value is 100.");
 	}
 	
-	//	ECP: Invalid - Outside valid values.
-	@Test
-	void invalidUpperValue() {
-		assertNotEquals(101, exampleRange.getUpperBound(), "The upper bound value is not 101.");
-	}
-
-	// ECP: Invalid - Outside valid values.
-	@Test
-	void invalidLowerValue() {
-		assertNotEquals(1, exampleRange.getUpperBound(), "The upper bound value is not 1.");
-	}
+	//	Note: ECP below and above valid values (0 and 101) were removed as they are covered in BVA testing.
 	
 	// BVA: LB - 1
 	@Test
