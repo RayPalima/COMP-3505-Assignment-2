@@ -6,14 +6,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class CombineTest {
-	private Range testRange1;
-	private Range testRange2;
 	private Range combinedRange;
 	
 	@BeforeEach
     void setUp() {
-        testRange1 = new Range(-5.0, 10.0);
-        testRange2 = new Range(0.0, 20.0);
         
     }
 	//Equivalence Class Partitioning

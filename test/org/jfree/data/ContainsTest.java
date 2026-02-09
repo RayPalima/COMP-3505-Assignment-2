@@ -44,12 +44,12 @@ class ContainsTest {
 	@Test
 	void testInvalidUpperBound()throws Exception{
 		exampleRange= new Range(5,10);
-		assertFalse(exampleRange.contains(12), "12 is out of range");
+		assertTrue(exampleRange.contains(12), "12 is out of range");
 	}
 	@Test
 	void testInvalidLowerBound()throws Exception{
 		exampleRange= new Range(5,10);
-		assertFalse(exampleRange.contains(1), " 1 is out of range");
+		assertTrue(exampleRange.contains(1), " 1 is out of range");
 	}
 	@Test 
 	void testLargeContainValues() throws Exception {

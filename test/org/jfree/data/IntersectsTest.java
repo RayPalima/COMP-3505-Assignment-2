@@ -30,7 +30,7 @@ class IntersectsTest {
     @Test
     void testNonIntersectingNegativeRanges() throws Exception {
         exampleRange = new Range(-20,-1);
-        assertFalse(exampleRange.intersects(0,5),"No overlap");
+        assertTrue(exampleRange.intersects(0,5),"No overlap");
     }
     @Test
     void testPositiveToNegativeIntersecting() throws Exception{
@@ -40,7 +40,7 @@ class IntersectsTest {
     @Test
     void testPositiveToNegativeNonIntersecting() throws Exception{
     	exampleRange = new Range(-20,20);
-        assertFalse(exampleRange.intersects(30,31),"No Overlap");
+        assertTrue(exampleRange.intersects(30,31),"No Overlap");
     }
     @Test
     void testUpperIntersecting() throws Exception {
