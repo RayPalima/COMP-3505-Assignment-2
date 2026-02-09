@@ -20,15 +20,15 @@ class ConstrainTest {
 	
 	//Equivalence Class Partitioning (ECP)
   	@Test
-  	void constrainWithinValueRange() {
+  	void constrain_WithinValueRange() {
  		assertEquals(4.0, exampleRange.constrain(4.0),"The Target is within Range");
   	}
 	@Test
-  	void constrainAboveUpperRange() {
+  	void constrain_AboveUpperRange() {
  		assertEquals(10.0, exampleRange.constrain(15.0),"The Target is constrained in Upper Bound");
   	}
 	@Test
-  	void constrainBelowLowerRange() {
+  	void constrain_BelowLowerRange() {
  		assertEquals(0.0, exampleRange.constrain(-10.0),"The Target is constrained in Lower Bound");
   	}
 	

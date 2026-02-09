@@ -16,6 +16,10 @@ private Range exampleRange;
 	void setUp() throws Exception {
 		exampleRange = new Range(0, 10);
 	}
+	//expandToInclude(Range range, double value)
+    //Returns a range that includes all the values in the specified range AND contains the specified value.
+	
+	
 	//Equivalence Class Partitioning
 	@Test
   	void expandToInclude_BelowValueRange() {
@@ -30,37 +34,36 @@ private Range exampleRange;
 		assertEquals(new Range(0, 100), Range.expandToInclude(exampleRange, 100.0));
   	}
 	
-	
 	//Boundary Value Analysis
-	@Test
-	void expandToInclude_UpperBound_Below_One() {
-		assertEquals(new Range(0, 10), Range.expandToInclude(exampleRange, 9.0));
-	}
-	@Test
-	void expandToIncludeUpperBound() {
-		assertEquals(new Range(0, 10), Range.expandToInclude(exampleRange, 10.0));
-	}
-	@Test
-	void expandToInclude_UpperBound_Above_One() {
-		assertEquals(new Range(0, 11), Range.expandToInclude(exampleRange, 11.0));
-	}
 	@Test
 	void expandToInclude_LowerBound_Below_One() {
 		assertEquals(new Range(-1, 10), Range.expandToInclude(exampleRange, -1.0));
 	}
 	@Test
-	void expandToIncludeLowerBound() {
+	void expandToInclude_AtLowerBound() {
 		assertEquals(new Range(0, 10), Range.expandToInclude(exampleRange, 0.0));
 	}
 	@Test
 	void expandToInclude_LowerBound_Above_One() {
 		assertEquals(new Range(0, 10), Range.expandToInclude(exampleRange, 1.0));
 	}
+	@Test
+	void expandToInclude_UpperBound_Below_One() {
+		assertEquals(new Range(0, 10), Range.expandToInclude(exampleRange, 9.0));
+	}
+	@Test
+	void expandToInclude_AtUpperBound() {
+		assertEquals(new Range(0, 10), Range.expandToInclude(exampleRange, 10.0));
+	}
+	@Test
+	void expandToInclude_UpperBound_Above_One() {
+		assertEquals(new Range(0, 11), Range.expandToInclude(exampleRange, 11.0));
+	}
 	
 	//Should all be null bc there is no range
 	@ParameterizedTest
-	@ValueSource(ints ={-1,0,1,0,10,11})
-	void expandToIncludeNullRange(int value) {
+	@ValueSource(ints ={-1,0,1,9,10,11})
+	void expandToInclude_NullRange(int value) {
 		assertNull(Range.expandToInclude(null, value));
 	}
 }
