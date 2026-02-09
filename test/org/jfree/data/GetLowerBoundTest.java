@@ -19,6 +19,7 @@ class GetLowerBoundTest {
   		exampleRange = new Range(1, 100);
   	}
   	
+  	
   	//  ECP: Valid - Within within values.
 	@Test
 	void validLowerValue() {
@@ -72,6 +73,7 @@ class GetLowerBoundTest {
 	void UBPlusOneValue() {
 		assertNotEquals(101, exampleRange.getLowerBound(), "The lower bound value is not 101.");
 	}
+	
 	
 	@AfterEach
   	void tearDown() throws Exception          	 {
