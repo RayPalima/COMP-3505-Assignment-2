@@ -62,8 +62,8 @@ private Range exampleRange;
 	
 	//Should all be null bc there is no range
 	@ParameterizedTest
-	@ValueSource(ints ={-1,0,1,9,10,11})
-	void expandToInclude_NullRange(int value) {
-		assertNull(Range.expandToInclude(null, value));
+	@ValueSource(doubles = {-1, 0, 1, 9, 10, 11})
+	void expandToInclude_NullRange(double value) {
+	    assertEquals(new Range(value, value), Range.expandToInclude(null, value));
 	}
 }
