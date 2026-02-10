@@ -60,7 +60,7 @@ private Range exampleRange;
 		assertEquals(new Range(0, 11), Range.expandToInclude(exampleRange, 11.0));
 	}
 	
-	//Should all be null bc there is no range
+	//Should all be null because there is no range
 	@ParameterizedTest
 	@ValueSource(doubles = {-1, 0, 1, 9, 10, 11})
 	void expandToInclude_NullRange(double value) {

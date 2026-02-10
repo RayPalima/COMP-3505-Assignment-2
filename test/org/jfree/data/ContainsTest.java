@@ -18,37 +18,37 @@ class ContainsTest {
 	}
 	@Test 
 	void testNegativeValueInRange() throws Exception{
-		exampleRange= new Range(-20,-1);
+		exampleRange = new Range(-20,-1);
 		assertTrue(exampleRange.contains(-5), " -5 is within range");
 	}
 	@Test
 	void testPositiveToNegativeRange() throws Exception{
-		exampleRange= new Range(-20, 20);
+		exampleRange = new Range(-20, 20);
 		assertTrue(exampleRange.contains(12), "12 is within range");
 	}
 	@Test
 	void testSinglePointRange() throws Exception{
-		exampleRange= new Range (10,10);
+		exampleRange = new Range (10,10);
 		assertTrue(exampleRange.contains(10), "10 is the range");
 	}
 	@Test
 	void testValueAtHighBound() throws Exception{
-		exampleRange= new Range(100,500);
+		exampleRange = new Range(100,500);
 		assertTrue(exampleRange.contains(500),"500 is at range");
 	}
 	@Test
 	void testValueAtLowBound() throws Exception{
-		exampleRange= new Range(100,500);
+		exampleRange = new Range(100,500);
 		assertTrue(exampleRange.contains(100),"100 is at range");
 	}
 	@Test
 	void testInvalidUpperBound()throws Exception{
-		exampleRange= new Range(5,10);
+		exampleRange = new Range(5,10);
 		assertTrue(exampleRange.contains(12), "12 is out of range");
 	}
 	@Test
 	void testInvalidLowerBound()throws Exception{
-		exampleRange= new Range(5,10);
+		exampleRange = new Range(5,10);
 		assertTrue(exampleRange.contains(1), " 1 is out of range");
 	}
 	@Test 

@@ -17,7 +17,7 @@ private Range exampleRange;
   	}
 	
 //	The following are Equivalence Class Partitioning (ECP).
-// The test cases are also similar to the one in the "ShiftTest" as they are both the same method but this one is just more "expanded". So some of the tests will still apply.
+// 	The test cases are also similar to the one in the "ShiftTest" as they are both the same method but this one is just more "expanded". So some of the tests will still apply.
   	
 	@Test
 	void testValidRangeWithFalseZeroCrossing()  throws Exception {
@@ -107,7 +107,7 @@ private Range exampleRange;
     };
 
 //	The following are BVA testing (Only one boundary).
-// The right at boundary (0 delta) is already covered above.
+// 	The right at boundary (0 delta) is already covered above.
 	@Test
 	
 	//Following are minimum+ BVA
